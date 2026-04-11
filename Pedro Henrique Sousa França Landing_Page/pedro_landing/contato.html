@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página de contato e formulário para solicitações de serviços.">
+  <title>Contato | Pedro Henrique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CT</span>
+        <span>
+          Fale comigo
+          <small>Recebimento de demanda e proposta</small>
+        </span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="curriculo.html">Currículo</a>
+        <a href="github.html">GitHub</a>
+        <a href="servicos.html">Serviços</a>
+        <a class="active" href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container split-grid">
+      <section class="form-wrap">
+        <span class="eyebrow">Contato</span>
+        <h1>Solicite sua proposta</h1>
+        <p>
+          Preencha o formulário abaixo para enviar sua demanda. A ideia desta página é demonstrar diferentes tipos de campos HTML,
+          organização visual e captação de leads.
+        </p>
+
+        <div id="formMessage" class="form-message">
+          Obrigado! Seus dados foram registrados localmente nesta demonstração de landing page.
+        </div>
+
+        <form id="proposalForm">
+          <div class="form-grid">
+            <div>
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            </div>
+            <div>
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+            </div>
+            <div>
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+            </div>
+            <div>
+              <label for="empresa">Empresa / marca</label>
+              <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa, se houver">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Pessoa física ou jurídica</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="radio" name="tipoPessoa" value="PF" checked> Pessoa física</label>
+              <label class="choice"><input type="radio" name="tipoPessoa" value="PJ"> Pessoa jurídica</label>
+            </div>
+          </fieldset>
+
+          <div class="form-grid">
+            <div>
+              <label for="horario">Melhor horário para contato</label>
+              <select id="horario" name="horario" required>
+                <option value="">Selecione</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+                <option>Qualquer horário</option>
+              </select>
+            </div>
+            <div>
+              <label for="servico">Tipo de serviço desejado</label>
+              <select id="servico" name="servico" required>
+                <option value="">Selecione</option>
+                <option>Landing page</option>
+                <option>Homepage institucional</option>
+                <option>Site estático</option>
+                <option>Site dinâmico</option>
+                <option>Página avançada</option>
+              </select>
+            </div>
+            <div>
+              <label for="orcamento">Faixa de orçamento</label>
+              <select id="orcamento" name="orcamento">
+                <option>Até R$ 500</option>
+                <option>R$ 500 a R$ 1.000</option>
+                <option>R$ 1.000 a R$ 2.500</option>
+                <option>Acima de R$ 2.500</option>
+              </select>
+            </div>
+            <div>
+              <label for="prazo">Prazo desejado</label>
+              <input type="date" id="prazo" name="prazo">
+            </div>
+          </div>
+
+          <fieldset>
+            <legend>Recursos desejados</legend>
+            <div class="choice-row">
+              <label class="choice"><input type="checkbox" name="recursos" value="formulario"> Formulário</label>
+              <label class="choice"><input type="checkbox" name="recursos" value="responsivo"> Responsivo</label>
+              <label class="choice"><input type="checkbox" name="recursos" value="animacoes"> Animações</label>
+              <label class="choice"><input type="checkbox" name="recursos" value="integracao"> Integração</label>
+              <label class="choice"><input type="checkbox" name="recursos" value="blog"> Blog / notícias</label>
+            </div>
+          </fieldset>
+
+          <div>
+            <label for="descricao">Descreva o que deseja contratar</label>
+            <textarea id="descricao" name="descricao" rows="7" placeholder="Conte como você imagina seu projeto, objetivo do site, páginas desejadas, referências visuais e outras informações importantes."></textarea>
+          </div>
+
+          <div>
+            <label for="arquivo">Anexar referência visual (opcional)</label>
+            <input type="file" id="arquivo" name="arquivo">
+          </div>
+
+          <button type="submit">Enviar solicitação</button>
+        </form>
+      </section>
+
+      <aside class="form-wrap contact-card">
+        <span class="eyebrow">Atendimento</span>
+        <h2>Como esta página ajuda</h2>
+        <p>
+          Além de captar dados de clientes e visitantes, este formulário demonstra uso de <strong>textbox</strong>, <strong>radio button</strong>,
+          <strong>checkbox</strong>, <strong>combobox</strong>, <strong>date</strong>, <strong>textarea</strong> e <strong>upload de arquivo</strong>.
+        </p>
+
+        <div class="cards-grid">
+          <article class="card col-12">
+            <h3>Fluxo ideal</h3>
+            <p>O visitante navega pelo site, conhece seu perfil, vê seus serviços e envia a solicitação nesta página.</p>
+          </article>
+          <article class="card col-12">
+            <h3>Contato externo</h3>
+            <p>
+              GitHub público: <a class="inline-link" href="https://github.com/pedrohsf1" target="_blank" rel="noopener noreferrer">github.com/pedrohsf1</a>
+            </p>
+          </article>
+          <article class="card col-12">
+            <h3>Links internos</h3>
+            <p>
+              Você também pode voltar para a <a class="inline-link" href="index.html">home</a>, abrir o <a class="inline-link" href="curriculo.html">currículo</a>
+              ou consultar a página de <a class="inline-link" href="servicos.html">serviços</a>.
+            </p>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Captação de leads</h3>
+        <p>Esta página foi pensada para receber demandas, propostas e informações iniciais do cliente de forma organizada.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="curriculo.html">Currículo</a>
+        <a href="github.html">GitHub</a>
+        <a href="servicos.html">Serviços</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
