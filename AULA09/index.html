@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 09</title>
+    <style>
+        .tab {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Formulário de Cadastro</h1>
+    <table class="tab" border="1">
+        <form action="mailto:contato@dominio.com" method="post" enctype="text/plain">
+            <tr>
+                <td>Nome completo:</td>
+                <td><input type="text" name="nome" placeholder="Digite seu nome completo"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="email" name="email" placeholder="Digite seu e-mail"></td>
+            </tr>
+            <tr>
+                <td>E-mail institucional:</td>
+                <td><input type="email" name="email_institucional" placeholder="Digite seu e-mail com @"></td>
+            </tr>
+            <tr>
+                <td>Senha de acesso:</td>
+                <td><input type="password" name="senha"></td>
+            </tr>
+            <tr>
+                <td>Idade:</td>
+                <td><input type="number" name="idade" min="16"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="comentario">Deixe sua mensagem:</label>
+                    <textarea name="comentario" cols="50" rows="6"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="area">Área de interesse</label>
+                    <br>
+                    <input type="checkbox" name="area" value="programacao"> Programação
+                    <br>
+                    <input type="checkbox" name="area" value="design"> Design
+                    <br>
+                    <input type="checkbox" name="area" value="banco_de_dados"> Banco de Dados
+                </td>
+
+                <td>
+                    <label for="objetivo">Objetivo principal</label>
+                    <br>
+                    <input type="radio" name="objetivo" value="estudo"> Estudo
+                    <br>
+                    <input type="radio" name="objetivo" value="trabalho"> Trabalho
+                    <br>
+                    <input type="radio" name="objetivo" value="portfolio"> Portfólio
+                    <br>
+                    <input type="radio" name="objetivo" value="pesquisa"> Pesquisa
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="linguagem">Linguagens favoritas</label>
+                    <select name="linguagem" size="4" multiple>
+                        <option value="Python">Python</option>
+                        <option value="Java">Java</option>
+                        <option value="Go">Go</option>
+                        <option value="JavaScript">JavaScript</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="nivel">Nível de experiência</label>
+                    <select name="nivel" size="1">
+                        <optgroup label="Iniciante">
+                            <option value="basico_html">HTML básico</option>
+                            <option value="basico_css">CSS básico</option>
+                            <option value="logica">Lógica de Programação</option>
+                        </optgroup>
+
+                        <optgroup label="Intermediário">
+                            <option value="frontend">Front-end</option>
+                            <option value="backend">Back-end</option>
+                            <option value="sql">SQL</option>
+                        </optgroup>
+
+                        <optgroup label="Avançado">
+                            <option value="api">APIs</option>
+                            <option value="arquitetura">Arquitetura</option>
+                            <option value="cloud">Cloud</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="cor">Cor preferida</label>
+                    <input type="color" name="cor">
+                </td>
+                <td>
+                    <label for="arquivo">Envie um arquivo</label>
+                    <input type="file" name="arquivo">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="data_hora">Data e hora do envio:</label>
+                    <input type="datetime-local" name="data_hora">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="Enviar">
+                </td>
+                <td>
+                    <input type="reset" value="Limpar">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>
